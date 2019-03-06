@@ -1,0 +1,35 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Jonathan Pierce <jonathan.leo.pierce@gmail.com>
+pkgname=cros-adapta
+pkgver=0.3
+pkgrel=1
+epoch=
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+groups=()
+depends=('gtk2' 'gtk-engine-murrine' 'gtk3' 'qt5-base' 'qt5-styleplugins')
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=()
+noextract=()
+md5sums=()
+validpgpkeys=()
+
+package() {
+  mkdir -p "$pkgdir/usr/share/themes"
+  ln -s "/opt/google/cros-containers/cros-adapta" "$pkgdir/usr/share/themes/CrosAdapta"
+}
